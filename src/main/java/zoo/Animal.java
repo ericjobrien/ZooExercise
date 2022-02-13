@@ -1,6 +1,6 @@
 package zoo;
 
-public class Animal {
+public class Animal implements Comparable<Animal>{
 
     String species;
     int temp = 0;
@@ -16,8 +16,12 @@ public class Animal {
 
     public int compareTo(Animal a) {
 
-
         return a.species.compareTo(this.species);
+    }
+
+    public String toString() {
+
+        return String.valueOf(this.species);
     }
 
 }

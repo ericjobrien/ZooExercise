@@ -1,20 +1,25 @@
 import org.junit.Assert;
-import org.junit.Test;  //sits in a hidden folder called m2 that resides on our local machine
+import org.junit.jupiter.api.*;
 import zoo.Animal;
 import zoo.AnimalTree;
+import zoo.FakeAnimalException;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AnimalTreeTest {
 
 
     @Test
-    void  ContainsAddedAnimal() {
+    void  ContainsAddedAnimal()  {
         AnimalTree tree1 = new AnimalTree();
         Animal a1 = new Animal("Giraffe");
         tree1.add(a1);
-         //need to build the contains method for the animal package before this works
+
+        assertTrue(tree1.contains(a1));
+
     }
-
-    //change version of Junit to utilze the BeforeAll test
-
 
 }

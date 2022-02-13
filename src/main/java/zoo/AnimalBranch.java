@@ -42,4 +42,9 @@ public class AnimalBranch {
     public void setRight(AnimalBranch right) {
         this.right = right;
     }
+
+    @Override
+    public String toString() {
+        return animal.toString();
+    }
 }
